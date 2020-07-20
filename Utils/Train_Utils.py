@@ -212,7 +212,7 @@ def data_generator_wrapper(
     )
 
 
-def ChangeToOtherMachine(filelist, repo="TrainYourOwnYOLO", remote_machine=""):
+def ChangeToOtherMachine(filelist, repo="TrainYourOwnYolo", remote_machine=""):
     """
     Takes a list of file_names located in a repo and changes it to the local machines file names. File must be executed from withing the repository
 
@@ -235,6 +235,7 @@ def ChangeToOtherMachine(filelist, repo="TrainYourOwnYOLO", remote_machine=""):
     new_list = []
 
     for file in filelist:
+        print(file.split(repo))
         suffix = (file.split(repo))[1]
         if suffix[0] == "/":
             suffix = suffix[1:]
